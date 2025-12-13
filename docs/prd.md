@@ -433,19 +433,31 @@ Vase Subvalidator
 
 ---
 
+## Resolved Questions
+
+1. **Station X Token Address**: `TBD` - Need to query from deployed seat NFT contract or obtain from Beekeepers.
+
+2. **Delegation Implementation**: **LSG-specific delegation**. Create new delegation mechanism within LSG contracts, separate from existing NFT-level delegation.
+
+3. **PoL Strategy Operator**: **Beekeepers via Growth Treasury**. PoL Reinvestment strategy routes funds to Growth Treasury wallet. Beekeepers use these funds to bribe partner gauges and execute PoL meta-game strategies.
+
+4. **Audit Scope**: **Full audit required**. Even though forking audited LSG code, a complete audit is necessary due to:
+   - Significant modifications for NFT-based voting
+   - Multi-token revenue handling
+   - New delegation system
+   - Integration with apDAO's existing contracts
+
+5. **Emergency Procedures**: **Full winddown with kill switches**. If a strategy is compromised:
+   - Kill switch immediately stops revenue flow to affected strategy
+   - Pending funds route to treasury
+   - User funds must be protected at all costs to maintain trust
+   - No partial measures - full protection or nothing
+
+6. **Revenue Flow**: **Auto-pushed to RevenueRouter**. Vase subvalidator automatically pushes revenue to a designated wallet, which will be the LSG RevenueRouter contract address.
+
 ## Open Questions
 
-1. **Station X Token Address**: Which deployed token should LSG read for voting power?
-
-2. **Delegation Implementation**: Should delegation be at NFT level (existing) or new LSG-specific delegation?
-
-3. **PoL Strategy Operator**: Who manages the PoL Reinvestment strategy bribing decisions?
-
-4. **Audit Scope**: Full audit vs differential audit (since forking audited code)?
-
-5. **Emergency Procedures**: What happens if a strategy contract is compromised mid-epoch?
-
-6. **Revenue Claiming**: Is Vase revenue auto-pushed or does apDAO need to claim it?
+1. **Station X Token Address**: Need to obtain the deployed address from Beekeepers or query from seat NFT contract's `stationXTokens` array.
 
 ---
 
@@ -477,7 +489,7 @@ Vase Subvalidator
 
 ---
 
-*Document Version: 1.0*
+*Document Version: 1.1*
 *Last Updated: December 2024*
 *Author: PRD Architect Agent*
-*Status: Draft - Pending User Approval*
+*Status: Draft - 5/6 Questions Resolved, 1 Pending (Station X Address)*
