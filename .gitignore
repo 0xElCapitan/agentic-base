@@ -41,6 +41,9 @@ tmp/
 temp/
 *.tmp
 
+# Reference repos (cloned for analysis)
+liquid-signal-governance/
+
 # Project-specific generated artifacts
 # IMPORTANT: Uncomment these lines when using this as a base for your project
 # to avoid committing generated documentation to your repository
