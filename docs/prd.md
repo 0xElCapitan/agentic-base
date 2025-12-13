@@ -288,12 +288,14 @@ Vase Subvalidator
 
 | Component | Original LSG | apDAO Fork |
 |-----------|-------------|------------|
-| Voting Power | GovernanceToken.balanceOf() | StationXToken.balanceOf() / 1e18 |
+| Voting Power | GovernanceToken.balanceOf() | IERC721(seatNFT).balanceOf() |
 | Staking | Stake ERC20 → get gToken | No staking; NFT ownership = votes |
-| Unstaking Check | Must clear votes to unstake | N/A (NFT transfers handle this) |
+| Unstaking Check | Must clear votes to unstake | N/A (NFT transfers to Auction/LBT auto-remove votes) |
 | Revenue Token | Single (WETH) | Multiple (stables, vBGT, BERA, bribes) |
-| Delegation | None | Owner can delegate to any address |
+| Delegation | None | LSG-specific delegation mechanism |
 | Strategy Logic | Dutch auction | Direct routing (no auction) |
+
+**Note**: Station X governance tokens were never activated on Berachain (`stationXTokens.length == 0`). Direct NFT balance provides equivalent functionality since transfer restrictions already handle auction queue and LBT scenarios.
 
 ### Contract Addresses (Placeholders)
 
@@ -435,7 +437,12 @@ Vase Subvalidator
 
 ## Resolved Questions
 
-1. **Station X Token Address**: `TBD` - Need to query from deployed seat NFT contract or obtain from Beekeepers.
+1. **Station X Token Address**: **N/A - Station X tokens were never activated on Berachain**. Investigation revealed that `stationXTokens.length == 0` on the deployed seat NFT contract. The governance token infrastructure exists in code but was never populated with actual ERC20DAO token addresses.
+
+   **Impact on LSG**: Instead of reading Station X token balance, LSG will use **direct NFT balance** (`IERC721(seatNFT).balanceOf(account)`). This works because:
+   - Seat enters auction queue → transferred to Auction House → owner's balance decreases
+   - Seat defaults on loan → transferred to LBT → owner's balance decreases
+   - No additional hooks needed - existing transfer mechanics handle vote removal automatically
 
 2. **Delegation Implementation**: **LSG-specific delegation**. Create new delegation mechanism within LSG contracts, separate from existing NFT-level delegation.
 
@@ -457,7 +464,7 @@ Vase Subvalidator
 
 ## Open Questions
 
-1. **Station X Token Address**: Need to obtain the deployed address from Beekeepers or query from seat NFT contract's `stationXTokens` array.
+All critical questions have been resolved. No blockers for proceeding to architecture phase.
 
 ---
 
@@ -489,7 +496,7 @@ Vase Subvalidator
 
 ---
 
-*Document Version: 1.1*
+*Document Version: 1.2*
 *Last Updated: December 2024*
 *Author: PRD Architect Agent*
-*Status: Draft - 5/6 Questions Resolved, 1 Pending (Station X Address)*
+*Status: Ready for Architecture Phase - All Questions Resolved*
