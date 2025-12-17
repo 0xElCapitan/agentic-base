@@ -38,83 +38,88 @@
 
 ---
 
-## Sprint 1: Foundation & Revenue Router
+## Sprint 1: Foundation & Revenue Router - ✅ COMPLETED
 **Duration**: 1 week
 **Goal**: Project setup and MultiTokenRouter implementation
+**Status**: ✅ Approved by Senior Technical Lead (December 17, 2025)
 
 ### Tasks
 
-#### S1-T1: Project Initialization
+#### S1-T1: Project Initialization ✅
 **Description**: Set up Foundry project structure with dependencies and configuration.
 
 **Acceptance Criteria**:
-- [ ] Foundry project initialized with `forge init`
-- [ ] OpenZeppelin contracts v5.x installed
-- [ ] Solmate installed for gas-optimized utilities
-- [ ] `foundry.toml` configured for Berachain
-- [ ] `.env.example` with required variables
-- [ ] Basic CI/CD workflow (GitHub Actions for tests)
+- ✅ Foundry project initialized with `forge init`
+- ✅ OpenZeppelin contracts v5.x installed
+- ✅ Solmate installed for gas-optimized utilities
+- ✅ `foundry.toml` configured for Berachain
+- ✅ `.env.example` with required variables
+- ℹ️  Basic CI/CD workflow (GitHub Actions for tests) - Deferred to Sprint 5
 
 **Effort**: 0.5 days
 **Dependencies**: None
+**Status**: ✅ Complete
 
 ---
 
-#### S1-T2: MultiTokenRouter Implementation
+#### S1-T2: MultiTokenRouter Implementation ✅
 **Description**: Implement revenue router that accumulates tokens from Vase and forwards to Voter.
 
 **Acceptance Criteria**:
-- [ ] Contract compiles without errors
-- [ ] `setWhitelistedToken()` adds/removes tokens from whitelist
-- [ ] `flush(token)` transfers single token to Voter
-- [ ] `flushAll()` transfers all whitelisted tokens
-- [ ] `pause()`/`unpause()` controls operation
-- [ ] Events emitted for all state changes
-- [ ] Custom errors instead of require strings
-- [ ] NatSpec comments on all public functions
+- ✅ Contract compiles without errors
+- ✅ `setWhitelistedToken()` adds/removes tokens from whitelist
+- ✅ `flush(token)` transfers single token to Voter
+- ✅ `flushAll()` transfers all whitelisted tokens
+- ✅ `pause()`/`unpause()` controls operation
+- ✅ Events emitted for all state changes
+- ✅ Custom errors instead of require strings
+- ✅ NatSpec comments on all public functions
 
 **Effort**: 1.5 days
 **Dependencies**: S1-T1
+**Status**: ✅ Complete
 
 ---
 
-#### S1-T3: MultiTokenRouter Tests
+#### S1-T3: MultiTokenRouter Tests ✅
 **Description**: Comprehensive unit tests for MultiTokenRouter.
 
 **Acceptance Criteria**:
-- [ ] Test: whitelist token successfully
-- [ ] Test: flush single token transfers correctly
-- [ ] Test: flushAll transfers multiple tokens
-- [ ] Test: revert on non-whitelisted token
-- [ ] Test: revert when paused
-- [ ] Test: only owner can whitelist/pause
-- [ ] Test: pendingRevenue view returns correct balance
-- [ ] Coverage: >90% for MultiTokenRouter
+- ✅ Test: whitelist token successfully
+- ✅ Test: flush single token transfers correctly
+- ✅ Test: flushAll transfers multiple tokens
+- ✅ Test: revert on non-whitelisted token
+- ✅ Test: revert when paused
+- ✅ Test: only owner can whitelist/pause
+- ✅ Test: pendingRevenue view returns correct balance
+- ✅ Coverage: >90% for MultiTokenRouter
 
 **Effort**: 1 day
 **Dependencies**: S1-T2
+**Status**: ✅ Complete (31+ comprehensive tests)
 
 ---
 
-#### S1-T4: Mock Contracts
+#### S1-T4: Mock Contracts ✅
 **Description**: Create mock contracts for testing (MockERC20, MockERC721, MockVoter).
 
 **Acceptance Criteria**:
-- [ ] MockERC20 with mint function
-- [ ] MockERC721 with mint function (simulates seat NFT)
-- [ ] MockVoter with notifyRevenue stub
-- [ ] All mocks in `test/mocks/` directory
+- ✅ MockERC20 with mint function
+- ✅ MockERC721 with mint function (simulates seat NFT)
+- ✅ MockVoter with notifyRevenue stub
+- ✅ All mocks in `test/mocks/` directory
 
 **Effort**: 0.5 days
 **Dependencies**: S1-T1
+**Status**: ✅ Complete
 
 ---
 
 ### Sprint 1 Deliverables
-- [ ] Working Foundry project
-- [ ] MultiTokenRouter contract with full test coverage
-- [ ] Mock contracts for testing
-- [ ] Documentation: README with setup instructions
+- ✅ Working Foundry project
+- ✅ MultiTokenRouter contract with full test coverage
+- ✅ Mock contracts for testing
+- ✅ Documentation: README with setup instructions
 
 ---
 
