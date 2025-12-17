@@ -43,6 +43,8 @@ temp/
 
 # Reference repos (cloned for analysis)
 liquid-signal-governance/
+# Server audit reports (contain sensitive deployment info)
+docs/deployment/SERVER-REALITY-AUDIT.md
 
 # Project-specific generated artifacts
 # IMPORTANT: Uncomment these lines when using this as a base for your project
