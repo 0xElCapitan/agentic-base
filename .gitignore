@@ -41,6 +41,8 @@ tmp/
 temp/
 *.tmp
 
+# Reference repos (cloned for analysis)
+liquid-signal-governance/
 # Server audit reports (contain sensitive deployment info)
 docs/deployment/SERVER-REALITY-AUDIT.md
 
