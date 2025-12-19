@@ -3,7 +3,7 @@
 > Auto-maintained index of all sprint A2A communication records.
 > This file preserves organizational memory and enables intelligence across sprints.
 
-**Last Updated**: 2025-12-18
+**Last Updated**: 2025-12-19
 
 ---
 
@@ -16,6 +16,7 @@
 | sprint-1 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-1/reviewer-apDAO-LSG.md) | [feedback](sprint-1/engineer-feedback-apDAO-LSG.md) | [audit](sprint-1/auditor-sprint-feedback-apDAO-LSG.md) | ✅ |
 | sprint-2 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-2/reviewer-apDAO-LSG.md) | [feedback](sprint-2/engineer-feedback-apDAO-LSG.md) | [audit](sprint-2/auditor-sprint-feedback-apDAO-LSG.md) | ✅ |
 | sprint-3 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-3/reviewer-apDAO-LSG.md) | [feedback](sprint-3/engineer-feedback-apDAO-LSG.md) | [audit](sprint-3/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-3/COMPLETED-apDAO-LSG) |
+| sprint-4 | REVIEW_APPROVED | [reviewer-apDAO-LSG.md](sprint-4/reviewer-apDAO-LSG.md) | [feedback](sprint-4/engineer-feedback-apDAO-LSG.md) | pending | - |
 
 ### apDAO LSG Sprint Details
 
@@ -38,6 +39,23 @@
 - **Total Tests**: 141 passing (44 + 55 + 31 + 11)
 - **Security Audit**: APPROVED - LETS FUCKING GO
 - **Status**: COMPLETED ✅
+
+#### Sprint 4: Strategy Contracts
+- **Deliverables**:
+  - IStrategy.sol (40 lines) - Strategy interface
+  - IKodiakRouter.sol (45 lines) - Kodiak + LBT interfaces
+  - DirectDistributionStrategy.sol (138 lines) - Forwards to Bribe
+  - GrowthTreasuryStrategy.sol (133 lines) - Forwards to treasury
+  - LBTBoostStrategy.sol (298 lines) - Swap + LBT deposit
+  - DirectDistributionStrategy.t.sol (194 lines) - 22 unit tests
+  - GrowthTreasuryStrategy.t.sol (203 lines) - 24 unit tests
+  - LBTBoostStrategy.t.sol (329 lines) - 55 unit tests
+  - StrategyIntegration.t.sol (329 lines) - 10 integration tests
+  - MockKodiakRouter.sol, MockLBT.sol - Testing mocks
+- **New Tests**: 111 passing
+- **Total Tests**: 252 passing (141 + 111)
+- **Review Status**: APPROVED - awaiting security audit
+- **Status**: REVIEW_APPROVED
 
 ---
 

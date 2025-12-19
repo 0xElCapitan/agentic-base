@@ -347,104 +347,104 @@
 
 ### Tasks
 
-#### S4-T1: Strategy Interface & Base
+#### S4-T1: Strategy Interface & Base ✅
 **Description**: Create IStrategy interface and base patterns.
 
 **Acceptance Criteria**:
-- [ ] IStrategy interface with execute() and rescueTokens()
-- [ ] Common patterns documented
-- [ ] Shared imports organized
+- [x] IStrategy interface with execute() and rescueTokens()
+- [x] Common patterns documented
+- [x] Shared imports organized
 
 **Effort**: 0.5 days
 **Dependencies**: S3-T5
 
 ---
 
-#### S4-T2: DirectDistributionStrategy
+#### S4-T2: DirectDistributionStrategy ✅
 **Description**: Strategy that forwards all tokens to Bribe contract.
 
 **Acceptance Criteria**:
-- [ ] Receives tokens from Voter distribution
-- [ ] `execute()` forwards all tokens to associated Bribe
-- [ ] Calls `bribe.notifyRewardAmount()` for each token
-- [ ] `rescueTokens()` for emergency recovery
-- [ ] Events: Distributed
+- [x] Receives tokens from Voter distribution
+- [x] `execute()` forwards all tokens to associated Bribe
+- [x] Calls `bribe.notifyRewardAmount()` for each token
+- [x] `rescueTokens()` for emergency recovery
+- [x] Events: Distributed
 
 **Effort**: 1 day
 **Dependencies**: S4-T1
 
 ---
 
-#### S4-T3: GrowthTreasuryStrategy
+#### S4-T3: GrowthTreasuryStrategy ✅
 **Description**: Strategy that forwards all tokens to Growth Treasury multisig.
 
 **Acceptance Criteria**:
-- [ ] Receives tokens from Voter distribution
-- [ ] `execute()` forwards all tokens to growthTreasury address
-- [ ] `setGrowthTreasury()` allows address update (owner-only)
-- [ ] `rescueTokens()` for emergency recovery
-- [ ] Events: Forwarded, TreasuryUpdated
+- [x] Receives tokens from Voter distribution
+- [x] `execute()` forwards all tokens to growthTreasury address
+- [x] `setGrowthTreasury()` allows address update (owner-only)
+- [x] `rescueTokens()` for emergency recovery
+- [x] Events: Forwarded, TreasuryUpdated
 
 **Effort**: 0.5 days
 **Dependencies**: S4-T1
 
 ---
 
-#### S4-T4: LBTBoostStrategy - Kodiak Integration
+#### S4-T4: LBTBoostStrategy - Kodiak Integration ✅
 **Description**: Strategy that swaps tokens via Kodiak and deposits to LBT.
 
 **Acceptance Criteria**:
-- [ ] Configurable swap paths per token via `setSwapPath()`
-- [ ] Integrates with Kodiak swap aggregator
-- [ ] `execute()` swaps all tokens to target token (WETH)
-- [ ] Deposits swapped tokens to LBT via `addBacking()`
-- [ ] Handles swap failures gracefully
-- [ ] `rescueTokens()` for emergency recovery
-- [ ] Events: Executed, SwapPathSet
+- [x] Configurable swap paths per token via `setSwapPath()`
+- [x] Integrates with Kodiak swap aggregator
+- [x] `execute()` swaps all tokens to target token (WETH)
+- [x] Deposits swapped tokens to LBT via `addBacking()`
+- [x] Handles swap failures gracefully
+- [x] `rescueTokens()` for emergency recovery
+- [x] Events: Executed, SwapPathSet
 
 **Effort**: 2 days
 **Dependencies**: S4-T1
 
 ---
 
-#### S4-T5: Kodiak Integration Research
+#### S4-T5: Kodiak Integration Research ✅
 **Description**: Research and document Kodiak API/aggregator integration.
 
 **Acceptance Criteria**:
-- [ ] Document Kodiak router address on Berachain
-- [ ] Document swap function signatures
-- [ ] Example swap path encoding
-- [ ] Test swap on testnet manually
+- [x] Document Kodiak router address on Berachain
+- [x] Document swap function signatures
+- [x] Example swap path encoding
+- [x] Test swap on testnet manually
 
 **Effort**: 1 day
 **Dependencies**: None (can run parallel)
 
 ---
 
-#### S4-T6: Strategy Unit Tests
+#### S4-T6: Strategy Unit Tests ✅
 **Description**: Unit tests for all 3 strategy contracts.
 
 **Acceptance Criteria**:
-- [ ] DirectDistributionStrategy: forwards to bribe correctly
-- [ ] GrowthTreasuryStrategy: forwards to treasury correctly
-- [ ] LBTBoostStrategy: swaps and deposits correctly (mocked)
-- [ ] All strategies: rescueTokens works
-- [ ] All strategies: access control enforced
-- [ ] Coverage: >85% per strategy
+- [x] DirectDistributionStrategy: forwards to bribe correctly
+- [x] GrowthTreasuryStrategy: forwards to treasury correctly
+- [x] LBTBoostStrategy: swaps and deposits correctly (mocked)
+- [x] All strategies: rescueTokens works
+- [x] All strategies: access control enforced
+- [x] Coverage: >85% per strategy
 
 **Effort**: 2 days
 **Dependencies**: S4-T2, S4-T3, S4-T4
 
 ---
 
-#### S4-T7: Full Integration Test
+#### S4-T7: Full Integration Test ✅
 **Description**: End-to-end test: Router → Voter → Strategy → Destination.
 
 **Acceptance Criteria**:
-- [ ] Test flow with DirectDistributionStrategy
-- [ ] Test flow with GrowthTreasuryStrategy
-- [ ] Test flow with LBTBoostStrategy (mocked LBT)
-- [ ] Verify correct token amounts at each step
+- [x] Test flow with DirectDistributionStrategy
+- [x] Test flow with GrowthTreasuryStrategy
+- [x] Test flow with LBTBoostStrategy (mocked LBT)
+- [x] Verify correct token amounts at each step
 
 **Effort**: 1.5 days
 **Dependencies**: S4-T6
@@ -452,9 +452,10 @@
 ---
 
 ### Sprint 4 Deliverables
-- [ ] 3 strategy contracts implemented
-- [ ] Kodiak integration documented and tested
-- [ ] Full integration tests passing
+- [x] 3 strategy contracts implemented
+- [x] Kodiak integration documented and tested
+- [x] Full integration tests passing
+- ✅ All 111 new tests passing
 
 ---
 
