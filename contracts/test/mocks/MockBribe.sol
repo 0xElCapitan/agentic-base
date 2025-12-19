@@ -57,10 +57,22 @@ contract MockBribe {
         emit Withdrawn(account, amount);
     }
 
-    /// @notice Mock reward notification
+    /// @notice Mock reward notification (pulls tokens like real Bribe)
     /// @param token Token address
     /// @param amount Amount notified
     function notifyRewardAmount(address token, uint256 amount) external {
+        // Pull tokens from caller (like real Bribe)
+        // Using low-level call to avoid import issues
+        (bool success, ) = token.call(
+            abi.encodeWithSignature(
+                "transferFrom(address,address,uint256)",
+                msg.sender,
+                address(this),
+                amount
+            )
+        );
+        require(success, "Transfer failed");
+
         notifiedRewards[token] += amount;
         emit RewardNotified(token, amount);
     }
