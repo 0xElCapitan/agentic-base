@@ -18,7 +18,7 @@
 | sprint-3 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-3/reviewer-apDAO-LSG.md) | [feedback](sprint-3/engineer-feedback-apDAO-LSG.md) | [audit](sprint-3/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-3/COMPLETED-apDAO-LSG) |
 | sprint-4 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-4/reviewer-apDAO-LSG.md) | [feedback](sprint-4/engineer-feedback-apDAO-LSG.md) | [audit](sprint-4/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-4/COMPLETED-apDAO-LSG) |
 | sprint-5 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-5/reviewer-apDAO-LSG.md) | [feedback](sprint-5/engineer-feedback-apDAO-LSG.md) | [audit](sprint-5/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-5/COMPLETED-apDAO-LSG) |
-| sprint-6 | REVIEW_APPROVED | [reviewer-apDAO-LSG.md](sprint-6/reviewer-apDAO-LSG.md) | [feedback](sprint-6/engineer-feedback-apDAO-LSG.md) | pending | - |
+| sprint-6 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-6/reviewer-apDAO-LSG.md) | [feedback](sprint-6/engineer-feedback-apDAO-LSG.md) | [audit](sprint-6/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-6/COMPLETED-apDAO-LSG) |
 
 ### apDAO LSG Sprint Details
 
