@@ -18,6 +18,7 @@
 | sprint-3 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-3/reviewer-apDAO-LSG.md) | [feedback](sprint-3/engineer-feedback-apDAO-LSG.md) | [audit](sprint-3/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-3/COMPLETED-apDAO-LSG) |
 | sprint-4 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-4/reviewer-apDAO-LSG.md) | [feedback](sprint-4/engineer-feedback-apDAO-LSG.md) | [audit](sprint-4/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-4/COMPLETED-apDAO-LSG) |
 | sprint-5 | COMPLETED | [reviewer-apDAO-LSG.md](sprint-5/reviewer-apDAO-LSG.md) | [feedback](sprint-5/engineer-feedback-apDAO-LSG.md) | [audit](sprint-5/auditor-sprint-feedback-apDAO-LSG.md) | [COMPLETED](sprint-5/COMPLETED-apDAO-LSG) |
+| sprint-6 | IN_PROGRESS | [reviewer-apDAO-LSG.md](sprint-6/reviewer-apDAO-LSG.md) | pending | pending | - |
 
 ### apDAO LSG Sprint Details
 
@@ -72,6 +73,15 @@
 - **Review**: APPROVED - All good
 - **Security Audit**: APPROVED - LETS FUCKING GO (MEDIUM: 1 - gitignore observation)
 - **Status**: COMPLETED ✅
+
+#### Sprint 6: Audit Preparation
+- **Deliverables**:
+  - SECURITY-SELF-REVIEW.md (~200 lines) - Internal security checklist
+  - KNOWN-ISSUES.md (~200 lines) - Design decisions & limitations
+  - AUDIT-SCOPE.md (~300 lines) - Audit scope document
+  - contracts/README.md (234 lines) - Updated for audit package
+- **Total Tests**: 242 (no new tests - documentation sprint)
+- **Status**: IN_PROGRESS - Awaiting Review
 
 ---
 
