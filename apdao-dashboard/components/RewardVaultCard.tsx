@@ -119,7 +119,7 @@ export default function RewardVaultCard({ rewardVault }: RewardVaultCardProps) {
             <LineChart data={chartData}>
               <XAxis
                 dataKey="date"
-                stroke="#a0a0a0"
+                stroke="#a0b0b5"
                 fontSize={10}
                 tickLine={false}
                 axisLine={false}
@@ -130,19 +130,19 @@ export default function RewardVaultCard({ rewardVault }: RewardVaultCardProps) {
                 type="monotone"
                 dataKey="bgt"
                 name="BGT"
-                stroke="#a855f7"
+                stroke="#EE511E"
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: '#a855f7' }}
+                activeDot={{ r: 4, fill: '#EE511E' }}
               />
               <Line
                 type="monotone"
                 dataKey="xfatbera"
                 name="xFATBERA"
-                stroke="#3b82f6"
+                stroke="#00C5E0"
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: '#3b82f6' }}
+                activeDot={{ r: 4, fill: '#00C5E0' }}
               />
             </LineChart>
           </ResponsiveContainer>

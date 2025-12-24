@@ -8,7 +8,7 @@ interface HeaderProps {
   lastUpdated: string;
 }
 
-const DONATION_ADDRESS = "0x2677A37cf5E882C6e368B747A28a458C5d962ea0";
+const DONATION_ADDRESS = "0x89009269b6Cc5D8092E1f381476A46510C0F0E20";
 
 export default function Header({ lastUpdated }: HeaderProps) {
   const [copied, setCopied] = useState(false);
@@ -36,22 +36,27 @@ export default function Header({ lastUpdated }: HeaderProps) {
           </div>
 
           <div className="flex items-center gap-3">
-            <button
-              onClick={copyAddress}
-              className="flex items-center gap-2 px-4 py-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 rounded-lg text-accent transition-colors"
-            >
-              {copied ? (
-                <span className="text-success">Copied!</span>
-              ) : (
-                <>
-                  <span className="text-sm">Donate BERA</span>
-                  <span className="text-text-secondary text-sm">
-                    {truncateAddress(DONATION_ADDRESS)}
-                  </span>
-                  <Copy className="w-4 h-4" />
-                </>
-              )}
-            </button>
+            <div className="relative group">
+              <button
+                onClick={copyAddress}
+                className="flex items-center gap-2 px-4 py-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 rounded-lg text-accent transition-colors"
+              >
+                {copied ? (
+                  <span className="text-success">Copied!</span>
+                ) : (
+                  <>
+                    <span className="text-sm font-medium">Donate and Support us</span>
+                    <span className="text-text-secondary text-sm">
+                      {truncateAddress(DONATION_ADDRESS)}
+                    </span>
+                    <Copy className="w-4 h-4" />
+                  </>
+                )}
+              </button>
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-card border border-border rounded-lg text-xs text-text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                Support by donating to help build better public goods for the bees.
+              </div>
+            </div>
           </div>
         </div>
       </div>

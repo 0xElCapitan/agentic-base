@@ -117,36 +117,36 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
           >
             <defs>
               <linearGradient id="colorStables" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#004D5C" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#004D5C" stopOpacity={0.2} />
               </linearGradient>
               <linearGradient id="colorVolatile" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#a855f7" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#a855f7" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#EE511E" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#EE511E" stopOpacity={0.2} />
               </linearGradient>
               <linearGradient id="colorValidator" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#22c55e" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#22c55e" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#00C5E0" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#00C5E0" stopOpacity={0.2} />
               </linearGradient>
               <linearGradient id="colorLp" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#f59e0b" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#FFC500" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#FFC500" stopOpacity={0.2} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2a2a2a" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#2a4a52" />
             <XAxis
               dataKey="date"
               tickFormatter={formatDate}
-              stroke="#a0a0a0"
+              stroke="#a0b0b5"
               fontSize={12}
               tickLine={false}
-              axisLine={{ stroke: '#2a2a2a' }}
+              axisLine={{ stroke: '#2a4a52' }}
             />
             <YAxis
-              stroke="#a0a0a0"
+              stroke="#a0b0b5"
               fontSize={12}
               tickLine={false}
-              axisLine={{ stroke: '#2a2a2a' }}
+              axisLine={{ stroke: '#2a4a52' }}
               tickFormatter={(value) => `${value}%`}
               domain={[0, 100]}
             />
@@ -162,7 +162,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="lp"
               name="LPs"
               stackId="1"
-              stroke="#f59e0b"
+              stroke="#FFC500"
               fill="url(#colorLp)"
             />
             <Area
@@ -170,7 +170,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="validator"
               name="Validator"
               stackId="1"
-              stroke="#22c55e"
+              stroke="#00C5E0"
               fill="url(#colorValidator)"
             />
             <Area
@@ -178,7 +178,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="volatile"
               name="Volatile"
               stackId="1"
-              stroke="#a855f7"
+              stroke="#EE511E"
               fill="url(#colorVolatile)"
             />
             <Area
@@ -186,7 +186,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="stables"
               name="Stables"
               stackId="1"
-              stroke="#3b82f6"
+              stroke="#004D5C"
               fill="url(#colorStables)"
             />
           </AreaChart>

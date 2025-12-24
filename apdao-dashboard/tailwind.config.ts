@@ -9,19 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0f0f0f",
-        card: "#1a1a1a",
-        border: "#2a2a2a",
-        "text-primary": "#e0e0e0",
-        "text-secondary": "#a0a0a0",
-        stables: "#3b82f6",
-        volatile: "#a855f7",
-        validator: "#22c55e",
-        lps: "#f59e0b",
-        accent: "#fbbf24",
-        success: "#22c55e",
-        warning: "#f59e0b",
-        error: "#ef4444",
+        // apDAO Brand Colors
+        background: "#102C37",        // Dark background (darker Nocturnal Expedition)
+        card: "#1a3a42",              // Card background
+        border: "#2a4a52",            // Border color
+        "text-primary": "#e0e0e0",    // Light text for contrast
+        "text-secondary": "#a0b0b5",  // Secondary text
+        // Chart colors
+        stables: "#004D5C",           // Nocturnal Expedition (dark blue)
+        volatile: "#EE511E",          // Deep Saffron (orange)
+        validator: "#00C5E0",         // Oceanic Bright (cyan)
+        lps: "#FFC500",               // Forsythia (yellow)
+        // Accent colors
+        accent: "#EE511E",            // Deep Saffron (primary accent)
+        "accent-blue": "#00C5E0",     // Oceanic Bright
+        "accent-yellow": "#FFC500",   // Forsythia
+        mint: "#D5E9E3",              // Mystic Mint
+        // Status colors
+        success: "#00C5E0",           // Oceanic Bright for success
+        warning: "#FFC500",           // Forsythia for warning
+        error: "#ef4444",             // Keep red for errors
       },
     },
   },
