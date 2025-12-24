@@ -123,7 +123,7 @@ export default function ValidatorCard({ validator }: ValidatorCardProps) {
             <LineChart data={chartData}>
               <XAxis
                 dataKey="epoch"
-                stroke="#a0a0a0"
+                stroke="#a0b0b5"
                 fontSize={10}
                 tickLine={false}
                 axisLine={false}
@@ -133,10 +133,10 @@ export default function ValidatorCard({ validator }: ValidatorCardProps) {
               <Line
                 type="monotone"
                 dataKey="amount"
-                stroke="#22c55e"
+                stroke="#00E5FF"
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: '#22c55e' }}
+                activeDot={{ r: 4, fill: '#00E5FF' }}
               />
             </LineChart>
           </ResponsiveContainer>

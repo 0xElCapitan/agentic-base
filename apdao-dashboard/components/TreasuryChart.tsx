@@ -117,6 +117,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
           >
             <defs>
               <linearGradient id="colorStables" x1="0" y1="0" x2="0" y2="1">
+<<<<<<< HEAD
                 <stop offset="5%" stopColor="#0088CC" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#0088CC" stopOpacity={0.2} />
               </linearGradient>
@@ -131,22 +132,38 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               <linearGradient id="colorLp" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#FFD700" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#FFD700" stopOpacity={0.2} />
+=======
+                <stop offset="5%" stopColor="#0088CC" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#0088CC" stopOpacity={0.3} />
+              </linearGradient>
+              <linearGradient id="colorVolatile" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#FF6B35" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#FF6B35" stopOpacity={0.3} />
+              </linearGradient>
+              <linearGradient id="colorValidator" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#00E5FF" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#00E5FF" stopOpacity={0.3} />
+              </linearGradient>
+              <linearGradient id="colorLp" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#FFD700" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#FFD700" stopOpacity={0.3} />
+>>>>>>> 425585ae8ea5ec70068a8dbe4c17f5f7e849f9ad
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2a2a2a" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#2a4a52" />
             <XAxis
               dataKey="date"
               tickFormatter={formatDate}
-              stroke="#a0a0a0"
+              stroke="#a0b0b5"
               fontSize={12}
               tickLine={false}
-              axisLine={{ stroke: '#2a2a2a' }}
+              axisLine={{ stroke: '#2a4a52' }}
             />
             <YAxis
-              stroke="#a0a0a0"
+              stroke="#a0b0b5"
               fontSize={12}
               tickLine={false}
-              axisLine={{ stroke: '#2a2a2a' }}
+              axisLine={{ stroke: '#2a4a52' }}
               tickFormatter={(value) => `${value}%`}
               domain={[0, 100]}
             />
