@@ -133,10 +133,10 @@ export default function ValidatorCard({ validator }: ValidatorCardProps) {
               <Line
                 type="monotone"
                 dataKey="amount"
-                stroke="#00C5E0"
+                stroke="#00E5FF"
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: '#00C5E0' }}
+                activeDot={{ r: 4, fill: '#00E5FF' }}
               />
             </LineChart>
           </ResponsiveContainer>

@@ -117,20 +117,20 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
           >
             <defs>
               <linearGradient id="colorStables" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#004D5C" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#004D5C" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#0088CC" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#0088CC" stopOpacity={0.3} />
               </linearGradient>
               <linearGradient id="colorVolatile" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#EE511E" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#EE511E" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#FF6B35" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#FF6B35" stopOpacity={0.3} />
               </linearGradient>
               <linearGradient id="colorValidator" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#00C5E0" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#00C5E0" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#00E5FF" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#00E5FF" stopOpacity={0.3} />
               </linearGradient>
               <linearGradient id="colorLp" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#FFC500" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#FFC500" stopOpacity={0.2} />
+                <stop offset="5%" stopColor="#FFD700" stopOpacity={0.9} />
+                <stop offset="95%" stopColor="#FFD700" stopOpacity={0.3} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="#2a4a52" />
@@ -162,7 +162,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="lp"
               name="LPs"
               stackId="1"
-              stroke="#FFC500"
+              stroke="#FFD700"
               fill="url(#colorLp)"
             />
             <Area
@@ -170,7 +170,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="validator"
               name="Validator"
               stackId="1"
-              stroke="#00C5E0"
+              stroke="#00E5FF"
               fill="url(#colorValidator)"
             />
             <Area
@@ -178,7 +178,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="volatile"
               name="Volatile"
               stackId="1"
-              stroke="#EE511E"
+              stroke="#FF6B35"
               fill="url(#colorVolatile)"
             />
             <Area
@@ -186,7 +186,7 @@ export default function TreasuryChart({ data }: TreasuryChartProps) {
               dataKey="stables"
               name="Stables"
               stackId="1"
-              stroke="#004D5C"
+              stroke="#0088CC"
               fill="url(#colorStables)"
             />
           </AreaChart>

@@ -130,19 +130,19 @@ export default function RewardVaultCard({ rewardVault }: RewardVaultCardProps) {
                 type="monotone"
                 dataKey="bgt"
                 name="BGT"
-                stroke="#EE511E"
+                stroke="#FF6B35"
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: '#EE511E' }}
+                activeDot={{ r: 4, fill: '#FF6B35' }}
               />
               <Line
                 type="monotone"
                 dataKey="xfatbera"
                 name="xFATBERA"
-                stroke="#00C5E0"
+                stroke="#00E5FF"
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: '#00C5E0' }}
+                activeDot={{ r: 4, fill: '#00E5FF' }}
               />
             </LineChart>
           </ResponsiveContainer>

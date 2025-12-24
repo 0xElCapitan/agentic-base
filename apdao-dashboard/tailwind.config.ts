@@ -15,19 +15,19 @@ const config: Config = {
         border: "#2a4a52",            // Border color
         "text-primary": "#e0e0e0",    // Light text for contrast
         "text-secondary": "#a0b0b5",  // Secondary text
-        // Chart colors
-        stables: "#004D5C",           // Nocturnal Expedition (dark blue)
-        volatile: "#EE511E",          // Deep Saffron (orange)
-        validator: "#00C5E0",         // Oceanic Bright (cyan)
-        lps: "#FFC500",               // Forsythia (yellow)
+        // Chart colors (brighter for visibility)
+        stables: "#0088CC",           // Brighter blue
+        volatile: "#FF6B35",          // Brighter orange-red
+        validator: "#00E5FF",         // Brighter cyan
+        lps: "#FFD700",               // Brighter gold
         // Accent colors
-        accent: "#EE511E",            // Deep Saffron (primary accent)
-        "accent-blue": "#00C5E0",     // Oceanic Bright
-        "accent-yellow": "#FFC500",   // Forsythia
+        accent: "#FF6B35",            // Brighter Deep Saffron (primary accent)
+        "accent-blue": "#00E5FF",     // Brighter Oceanic
+        "accent-yellow": "#FFD700",   // Brighter Forsythia
         mint: "#D5E9E3",              // Mystic Mint
         // Status colors
-        success: "#00C5E0",           // Oceanic Bright for success
-        warning: "#FFC500",           // Forsythia for warning
+        success: "#00E5FF",           // Brighter cyan for success
+        warning: "#FFD700",           // Brighter gold for warning
         error: "#ef4444",             // Keep red for errors
       },
     },

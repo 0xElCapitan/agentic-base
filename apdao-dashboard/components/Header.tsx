@@ -29,7 +29,7 @@ export default function Header({ lastUpdated }: HeaderProps) {
             </div>
             <div>
               <h1 className="text-xl font-bold text-text-primary">apDAO Treasury</h1>
-              <p className="text-sm text-text-secondary">
+              <p className="text-sm text-text-secondary" suppressHydrationWarning>
                 Last updated: {formatDateTime(lastUpdated)}
               </p>
             </div>
